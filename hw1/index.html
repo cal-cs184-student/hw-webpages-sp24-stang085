@@ -105,7 +105,7 @@ What does this mean and how is it faster? For example, if we have a pixel that h
   <img src="./task2_4.png" alt="task2" style="width:800px;">
 
 <h4>16 samples/pixel:</h4>
-  <img src="./task2_16.png" alt="task2" style="width:200px;height:200px;">
+  <img src="./task2_16.png" alt="task2" style="width:800px;">
 
 
 <br>
@@ -125,7 +125,7 @@ This part mainly implemented transforms such as scaling, rotating, and translati
 For this cube-person, I changed the pose and outfit in order to make a ballerina. I changed the arm position and rotation to make it more curved and slightly more natural, and added hair and a skirt. Finally, I changed the color of the body parts so that it would look like the ballerina was wearing tights, a leotard, and a tutu.
 </p>
 
-  <img src="./task3.png" alt="task3" style="width:800px;height:800px;">
+  <img src="./task3.png" alt="task3" style="width:800px;">
 <br>
 
 
@@ -140,7 +140,7 @@ This task implemented barycentric coordinates in order to form smooth transition
 <p>
 Barycentric coordinates refers to a system that uses the three points of a triangle (A, B, C) in order to define another point (D). However close point D is to the others is reflected in the equation ɑA + βB + ɣC = D, where ɑ, β, and ɣ reflect how close point D is to points A, B and C, respectively. 
 </p>
-<img src="./task5_triangle.png" alt="task4" style="width:800px;height:800px;">
+<img src="./task5_triangle.png" alt="task4" style="width:800px;">
 
 
 
@@ -153,7 +153,7 @@ Since ɑ + β + ɣ = 1, we can use this to figure out how ‘green’, ‘blue�
 </p>
 
 <h4>Screenshot of svg/basic/test7.svg with sample_rate = 1:</h4>
-  <img src="./task4_wheel.png" alt="task4" style="width:800px;height:800px;">
+  <img src="./task4_wheel.png" alt="task4" style="width:800px;">
 
 <br>
 
@@ -193,21 +193,21 @@ The difference is that nearest sampling will sometimes cause random spots of col
 <h3>Examples:</h3>
 
 <h4> Nearest sampling, 1 sample/pixel</h4>
-  <img src="./task5_near_1.png" alt="task5" style="width:1000px;height:1000px;">
+  <img src="./task5_near_1.png" alt="task5" style="width:1200px;">
 
 <h4> Nearest sampling, 16 samples/pixel</h4>
-  <img src="./task5_near_16.png" alt="task5" style="width:1000px;height:1000px;">
+  <img src="./task5_near_16.png" alt="task5" style="width:1200px;">
 
 <h4> Bilinear sampling, 1 sample/pixel</h4>
-  <img src="./task5_bilinear_1.png" alt="task5" style="width:1000px;height:1000px;">
+  <img src="./task5_bilinear_1.png" alt="task5" style="width:1200px;">
 
 <h4> Bilinear sampling, 16 samples/pixel</h4>
-  <img src="./task5_bilinear_16.png" alt="task5" style="width:1000px;height:1000px;">
+  <img src="./task5_bilinear_16.png" alt="task5" style="width:1200px;">
 
 
 <h4>Comments:</h4>
 <p>
-There is a large difference between sample 1 per pixel and supersampling 16 per pixel; and there is another large difference when using bilinear sampling vs. nearest sampling at 1 sample per pixel. On the contrary, there is not much difference between nearest and bilinear sampling when supersampling.  
+Taking a look at the zoomed in area, there is a large difference between sample 1 per pixel and supersampling 16 per pixel; and there is another large difference when using bilinear sampling vs. nearest sampling at 1 sample per pixel. On the contrary, there is not much difference between nearest and bilinear sampling when supersampling.  
 </p>
 <p>
 This is because both supersampling and bilinear sampling are both methods that take the average of nearby colors, which will smooth out the transitions between colors and lines. Overall, using only 1 sample per pixel and nearest sampling can cause huge jumps in the image, and using supersampling and bilinear sampling can help to average out the values and create smoother transitions between pixels. 
@@ -260,19 +260,30 @@ With supersampling, you can get a very nice and even result, and it can signific
 <h3>Example:</h3>
 
 <h4>L_0, P_NEAREST</h4>
-  <img src="./L0-p_nearest.png" alt="task6" style="width:800px;height:800px;">
+  <img src="./L0-p_nearest.png" alt="task6" style="width:800px;">
 
 <h4>L_0, P_LINEAR</h4>
-  <img src="./L0-p_linear.png" alt="task6" style="width:800px;height:800px;">
+  <img src="./L0-p_linear.png" alt="task6" style="width:800px;">
   
 <h4>L_NEAREST, P_NEAREST</h4>
-  <img src="./l_near-p_near.png" alt="task6" style="width:800px;height:800px;">
+  <img src="./l_near-p_near.png" alt="task6" style="width:800px;">
   
 <h4>L_NEAREST, P_LINEAR</h4>
-  <img src="./L_nearest-P_linear.png" alt="task6" style="width:800px;height:800px;">
+  <img src="./L_nearest-P_linear.png" alt="task6" style="width:800px;">
   
   
 
+<h2>Notes:/h2>
+  <p>I'm not going to lie, I had a lot of trouble on this, but I got through it!
+    I got to learn a lot about this and the only thing I wished I had done was search for a partner earlier :( 
+</p>
+  <p> I also think that I wasn't able to implement Level sampling quite right, but I tried a lot of different things and it wouldn't 
+    get quite right, but it was good enough. There are a few lines that appear for the edges of the triangles, and it gets 
+    really blurry when you zoom out (not sure if that is correct or not).
+</p>
+    <p> But anyways, here's some fun screenshots I took of some interesting things:
+</p>
+  
 </body>
 </html>
 
