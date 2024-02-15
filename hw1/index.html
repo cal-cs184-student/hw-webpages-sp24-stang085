@@ -21,7 +21,7 @@
 <br>
 
 <h2>Task 1</h2>
-<h3>Overview</h3>
+<h3>Overview:</h3>
 <p>This first task goes through how to produce simple shapes with triangle rasterization. 
 </p>
 <h3>Process:</h3>
@@ -51,14 +51,14 @@ While I wasn’t able to check the differences in efficiency because of time con
 </p>
 
 <h3>Screenshot of basic/test4.svg:</h3>
-  <img src="./task1.png" alt="task1" style="width:200px;height:200px;>
+  <img src="./task1.png" alt="task1" style="width:800px;height:800px;">
 
 
 <br>
 
 <h2>Task 2</h2>
 
-<h3>Overview</h3>
+<h3>Overview:</h3>
 <p>
 This task implements supersampling. This is when the image generator takes more samples within the pixel, and then averages out the color. The purpose of this is to make the lines appear smoother, instead of having jagged edges which appear mostly at corners and diagonal lines. Supersampling can also reduce aliasing (which is when information is lost due to low sampling rates). So instead of having jagged lines or random dots at the edges of triangles, we can have a gradual fade as you go from the center to the point of the triangle. 
 </p>
@@ -98,14 +98,14 @@ What does this mean and how is it faster? For example, if we have a pixel that h
 
 <h3>Screenshots of basic/test4.svg:</h3>
 
-<h4>1 sample/pixel</h4>
-  <img src="./task2_1.png" alt="task2" style="width:250px;height:250px;>
+<h4>1 sample/pixel:</h4>
+  <img src="./task2_1.png" alt="task2" style="width:800px;height:800px;">
 
-<h4>4 samples/pixel</h4>
-  <img src="./task2_4.png" alt="task2" style="width:300px;height:300px;>
+<h4>4 samples/pixel:</h4>
+  <img src="./task2_4.png" alt="task2" style="width:800px;height:800px;">
 
-<h4>16 samples/pixel</h4>
-  <img src="./task2_16.png" alt="task2" style="width:400px;height:400px;>
+<h4>16 samples/pixel:</h4>
+  <img src="./task2_16.png" alt="task2" style="width:800px;height:800px;">
 
 
 <br>
@@ -116,7 +116,7 @@ What does this mean and how is it faster? For example, if we have a pixel that h
 
 <h2>Task 3</h2>
 
-<h3>Overview</h3>
+<h3>Overview:</h3>
 <p>
 This part mainly implemented transforms such as scaling, rotating, and translating. 
 </p>
@@ -125,14 +125,14 @@ This part mainly implemented transforms such as scaling, rotating, and translati
 For this cube-person, I changed the pose and outfit in order to make a ballerina. I changed the arm position and rotation to make it more curved and slightly more natural, and added hair and a skirt. Finally, I changed the color of the body parts so that it would look like the ballerina was wearing tights, a leotard, and a tutu.
 </p>
 
-  <img src="./task3.png" alt="task3">
+  <img src="./task3.png" alt="task3" style="width:800px;height:800px;">
 <br>
 
 
 
 
 <h2>Task 4</h2>
-<h3>Overview</h3>
+<h3>Overview:</h3>
 <p>
 This task implemented barycentric coordinates in order to form smooth transitions between pixels given the colors at each of the points. 
 </p>
@@ -140,20 +140,20 @@ This task implemented barycentric coordinates in order to form smooth transition
 <p>
 Barycentric coordinates refers to a system that uses the three points of a triangle (A, B, C) in order to define another point (D). However close point D is to the others is reflected in the equation ɑA + βB + ɣC = D, where ɑ, β, and ɣ reflect how close point D is to points A, B and C, respectively. 
 </p>
-<img src="./task5_triangle.png" alt="task4">
+<img src="./task5_triangle.png" alt="task4" style="width:800px;height:800px;">
 
 
 
 <h3>Example:</h3>
 <p>
-Take a look at this triangle. ɑ will represent the red (A), β for the blue (B), and ɣ for the green (C). If ɑ = 1, this means that point D = A, if β = 1 then Point D = B, and so on. Intuitively, using the triangle as a guide, the closer point D is to the red corner, the higher ɑ will be. 
+Take a look at this triangle above. ɑ will represent the red (A), β for the blue (B), and ɣ for the green (C). If ɑ = 1, this means that point D = A, if β = 1 then Point D = B, and so on. Intuitively, using the triangle as a guide, the closer point D is to the red corner, the higher ɑ will be. 
 </p>
 <p>
 Since ɑ + β + ɣ = 1, we can use this to figure out how ‘green’, ‘blue’ or ‘red’ point D will be based on the colors defined in the corners. 
 </p>
 
-<h4>Screenshot of svg/basic/test7.svg with sample_rate = 1</h4>
-  <img src="./task4_wheel.png" alt="task4">
+<h4>Screenshot of svg/basic/test7.svg with sample_rate = 1:</h4>
+  <img src="./task4_wheel.png" alt="task4" style="width:800px;height:800px;">
 
 <br>
 
@@ -164,7 +164,7 @@ Since ɑ + β + ɣ = 1, we can use this to figure out how ‘green’, ‘blue�
 <h2>Task 5</h2>
 
 
-<h3>Overview</h3>
+<h3>Overview:</h3>
 <p>
 This task is similar to the other triangle rasterizing tasks except for when we sample the color to produce the pixel, we have to sample it from an image instead of being given a single color, or interpolating it from triangle points. The way we sample in this part is also interesting because the triangles we are extracting the color from may not be the exact same proportions as it is on the image we’re trying to render. This means that we can render stretched or squished versions of the original images we sample from.
 </p>
@@ -193,16 +193,16 @@ The difference is that nearest sampling will sometimes cause random spots of col
 <h3>Examples:</h3>
 
 <h4> Nearest sampling, 1 sample/pixel</h4>
-  <img src="./task5_near_1.png" alt="task5">
+  <img src="./task5_near_1.png" alt="task5" style="width:1000px;height:1000px;">
 
 <h4> Nearest sampling, 16 samples/pixel</h4>
-  <img src="./task5_near_16.png" alt="task5">
+  <img src="./task5_near_16.png" alt="task5" style="width:1000px;height:1000px;">
 
 <h4> Bilinear sampling, 1 sample/pixel</h4>
-  <img src="./task5_bilinear_1.png" alt="task5">
+  <img src="./task5_bilinear_1.png" alt="task5" style="width:1000px;height:1000px;">
 
 <h4> Bilinear sampling, 16 samples/pixel</h4>
-  <img src="./task5_bilinear_16.png" alt="task5">
+  <img src="./task5_bilinear_16.png" alt="task5" style="width:1000px;height:1000px;">
 
 
 <h4>Comments:</h4>
@@ -224,7 +224,7 @@ This is because both supersampling and bilinear sampling are both methods that t
 
 <h2>Task 6</h2>
 
-<h3>Overview</h3>
+<h3>Overview:</h3>
 <p>
 This task is used to implement Level Sampling with mipmaps in order to create smoother transitions when images are squashed or stretched. 
 </p>
@@ -260,16 +260,16 @@ With supersampling, you can get a very nice and even result, and it can signific
 <h3>Example:</h3>
 
 <h4>L_0, P_NEAREST</h4>
-  <img src="./L0-p_nearest.png" alt="task6">
+  <img src="./L0-p_nearest.png" alt="task6" style="width:800px;height:800px;">
 
 <h4>L_0, P_LINEAR</h4>
-  <img src="./L0-p_linear.png" alt="task6">
+  <img src="./L0-p_linear.png" alt="task6" style="width:800px;height:800px;">
   
 <h4>L_NEAREST, P_NEAREST</h4>
-  <img src="./l_near-p_near.png" alt="task6">
+  <img src="./l_near-p_near.png" alt="task6" style="width:800px;height:800px;">
   
 <h4>L_NEAREST, P_LINEAR</h4>
-  <img src="./L_nearest-P_linear.png" alt="task6">
+  <img src="./L_nearest-P_linear.png" alt="task6" style="width:800px;height:800px;">
   
   
 
